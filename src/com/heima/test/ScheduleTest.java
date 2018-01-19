@@ -17,6 +17,6 @@ public class ScheduleTest extends Thread {
     public static void main(String[] args) {
         ScheduleTest scheduleTest = new ScheduleTest();
         ScheduledExecutorService threadPool = Executors.newScheduledThreadPool(3);
-        ScheduledFuture<?> schedule = threadPool.scheduleAtFixedRate(scheduleTest,1,3, TimeUnit.SECONDS);
+        threadPool.scheduleAtFixedRate(scheduleTest,1,3, TimeUnit.SECONDS);
     }
 }
